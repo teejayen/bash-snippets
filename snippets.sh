@@ -32,3 +32,5 @@ cp /var/www/vhosts/reallylongfilename.config{,-old}
 # Make a whole directory tree with one command.
 mkdir -p tmp/x/y/z
 
+# Check WordPress versions installed (WHM)
+find /home/*/public_html/ -type f -iwholename "*/wp-includes/version.php" -exec grep -H "\$wp_version =" {} \;
